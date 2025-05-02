@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
     status: 'ok',
     author,
     // TODO: change this to use your GitHub username!
-    githubUrl: 'https://github.com/mehakdhull/fragments',
+    githubUrl: 'https://github.com/Mehakdhull/fragments',
     version,
   });
 });
