@@ -4,23 +4,21 @@
   "description": ".",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "lint": "eslint './src/**/*.js'"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MehakDhull/fragments.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Mehak Dhull",
+  "license": "IUNLICENSED",
   "bugs": {
     "url": "https://github.com/MehakDhull/fragments/issues"
   },
   "homepage": "https://github.com/MehakDhull/fragments#readme",
   "dependencies": {
     "express": "^5.1.0"
-  },
-  "devDependencies": {
-    "prettier": "3.5.3"
   }
 }
