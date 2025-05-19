@@ -18,6 +18,12 @@ const pino = require('pino-http')({
 // Create an express app instance we can use to attach middleware and HTTP routes
 const app = express();
 
+
+// Print the environment variables if LOG_LEVEL is 'debug'
+if (process.env.LOG_LEVEL === 'debug') {
+  console.log(process.env);
+}
+
 // Use pino logging middleware
 app.use(pino);
 
@@ -64,6 +70,9 @@ app.use((err, req, res, next) => {
   // use a generic `500` server error and message.
   const status = err.status || 500;
   const message = err.message || 'unable to process request';
+
+
+  
 
   // If this is a server error, log something so we can see what's going on.
   if (status > 499) {
