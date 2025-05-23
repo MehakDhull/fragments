@@ -61,7 +61,8 @@ app.use((req, res) => {
   });
 });
 
-// Error-handling middleware
+// Error-handling middleware // eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   const status = err.status || 500;
   const message = err.message || 'unable to process request';
