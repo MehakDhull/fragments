@@ -28,13 +28,13 @@ app.use(cors());
 // Use gzip/deflate compression middleware
 app.use(compression());
 
-/* 🔽🔽🔽 ADD THIS SECTION TO FIX THE STRATEGY ERROR 🔽🔽🔽 */
+
 const passport = require('passport');
 const auth = require('./auth');
 
 passport.use(auth.strategy());      // Register "bearer" strategy
 app.use(passport.initialize());     // Initialize Passport middleware
-/* 🔼🔼🔼 END OF ADDITION 🔼🔼🔼 */
+
 
 // Now load your routes AFTER passport is ready
 app.use('/', require('./routes'));
@@ -78,5 +78,6 @@ app.use((err, req, res, next) => {
     },
   });
 });
+
 
 module.exports = app;
