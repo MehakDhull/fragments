@@ -21,7 +21,7 @@ describe('/ health check', () => {
 
   test('should return status: ok in response', async () => {
     const res = await request(app).get('/');
-    expect(res.body.status).toEqual('ok');
+    expect(res.body.status).toEqual('fail');
   });
 
   test('should return correct version, githubUrl, and author in response', async () => {
@@ -31,3 +31,7 @@ describe('/ health check', () => {
     expect(res.body.version).toEqual(version);
   });
 });
+test('this test fails on purpose', () => {
+    expect(1 + 1).toBe(3); // deliberately wrong
+  });
+  
