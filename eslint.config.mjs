@@ -1,18 +1,17 @@
-import js from "@eslint/js";
-import globals from "globals";
-import { defineConfig } from "eslint/config";
+// eslint.config.mjs
 
-export default defineConfig([
+import globals from 'globals';
+import pluginJs from '@eslint/js';
+
+export default [
+  { files: ['**/*.js'], languageOptions: { sourceType: 'commonjs' } },
   {
-    files: ["**/*.{js,mjs,cjs}"],
-    plugins: { js },
-    extends: ["js/recommended"],
     languageOptions: {
       globals: {
-        ...globals.node,   // ✅ This is what you need
+        ...globals.node,
+        ...globals.jest,
       },
-      sourceType: "commonjs", // ✅ Because you’re using require/module.exports
-      ecmaVersion: "latest"
-    }
+    },
   },
-]);
+  pluginJs.configs.recommended,
+];

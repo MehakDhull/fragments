@@ -4,7 +4,9 @@ const helmet = require('helmet');
 const compression = require('compression');
 
 // author and version from our package.json file
+
 const { author, version } = require('../package.json');
+
 
 const logger = require('./logger');
 const pino = require('pino-http')({ logger });
@@ -35,11 +37,6 @@ const auth = require('./auth');
 passport.use(auth.strategy());      // Register "bearer" strategy
 app.use(passport.initialize());     // Initialize Passport middleware
 
-
-// Now load your routes AFTER passport is ready
-app.use('/', require('./routes'));
-
-// Define a simple health check route
 app.get('/', (req, res) => {
   res.setHeader('Cache-Control', 'no-cache');
   res.status(200).json({
@@ -49,6 +46,11 @@ app.get('/', (req, res) => {
     version,
   });
 });
+
+// Now load your routes AFTER passport is ready
+app.use('/', require('./routes'));
+
+
 
 // 404 handler
 app.use((req, res) => {
