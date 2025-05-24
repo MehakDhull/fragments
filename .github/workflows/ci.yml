@@ -22,7 +22,7 @@ jobs:
         run: npm ci
       - name: Run ESLint
         run: npm run lint
-test:
+ unit-tests:
     name: Unit Tests
     runs-on: ubuntu-latest
     steps:
