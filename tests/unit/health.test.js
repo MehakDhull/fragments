@@ -21,17 +21,15 @@ describe('/ health check', () => {
 
   test('should return status: ok in response', async () => {
     const res = await request(app).get('/');
-    expect(res.body.status).toEqual('fail');
+    expect(res.body.status).toEqual('ok');
   });
 
   test('should return correct version, githubUrl, and author in response', async () => {
     const res = await request(app).get('/');
-    expect(1 + 1).toBe(3);
+    expect(res.body.author).toEqual(author);
     expect(res.body.githubUrl.startsWith('https://github.com/')).toBe(true);
     expect(res.body.version).toEqual(version);
   });
 });
-test('this test fails on purpose', () => {
-    expect(1 + 1).toBe(3); // deliberately wrong
-  });
+
   
