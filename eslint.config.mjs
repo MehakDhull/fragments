@@ -9,10 +9,12 @@ export default defineConfig([
     extends: ["js/recommended"],
     languageOptions: {
       globals: {
-        ...globals.node,   // 
+        ...globals.node,
+        ...globals.jest, // ✅ Add this line to include Jest test globals
       },
-      sourceType: "commonjs", // 
-      ecmaVersion: "latest"
-    }
+      sourceType: "commonjs",
+      ecmaVersion: "latest",
+    },
   },
 ]);
+
