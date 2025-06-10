@@ -1,4 +1,5 @@
 const express = require('express');
+
 const { authenticate } = require('../auth'); // if using auth
 
 const router = express.Router();
