@@ -27,4 +27,5 @@ COPY ./tests/.htpasswd ./tests/.htpasswd
 
 # Expose port and start the service
 EXPOSE 8080
-CMD npm start
+CMD ["npm", "start"]
+
