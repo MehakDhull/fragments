@@ -116,3 +116,4 @@ To get started, clone the repository to your local machine:
    git clone https://github.com/MehakDhull/fragments.git
   cd fragments 
   npm install
+.....
