@@ -1,0 +1,53 @@
+{
+  "name": "fragments",
+  "version": "1.0.0",
+  "description": "This course is CCP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -c jest.config.js --runInBand --",
+    "test:watch": "jest -c jest.config.js --runInBand --watch --",
+    "coverage": "jest -c jest.config.js --runInBand --coverage",
+    "lint": "eslint \"./src/**/*.js\" \"tests/**/*.js\"",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "debug": "node --inspect src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khmahida/fragments.git"
+  },
+  "keywords": [],
+  "author": "Mehak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khmahida/fragments/issues"
+  },
+  "homepage": "https://github.com/khmahida/fragments#readme",
+  "dependencies": {
+    "aws-jwt-verify": "^5.1.0",
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.0",
+    "passport": "^0.7.0",
+    "passport-http-bearer": "^1.0.1",
+    "pino": "^9.6.0",
+    "pino-http": "^10.4.0",
+    "pino-pretty": "^13.0.0",
+    "stoppable": "^1.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.26.0",
+    "globals": "^16.1.0",
+    "http-auth": "^4.2.1",
+    "http-auth-passport": "^1.0.7",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.10",
+    "prettier": "3.5.3",
+    "supertest": "^7.1.1"
+  }
+}
