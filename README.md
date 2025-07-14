@@ -1,5 +1,7 @@
 # Lab1
+
 # Key Features:
+
 Prettier for automatic code formatting.
 Utilizes the Express framework for handling HTTP requests and defining routes.
 Pino is used for structured logging to capture requests and errors effectively.
@@ -8,6 +10,7 @@ Nodemon automatically restarts the server during development for a smoother work
 Integration with the VSCode Debugger allows for real-time debugging and inspecting variables.
 
 # Prerequisites
+
 Before setting up the project on your local machine, make sure the following are installed:
 
 Node.js (version 16 or higher)
@@ -15,6 +18,7 @@ npm (Node Package Manager, which comes with Node.js)
 If you don’t have Node.js, you can download it from nodejs.org.
 
 # Step-by-Step Setup Instructions
+
 Step 1: GitHub Setup
 Create a GitHub repository called fragments:
 Set the repository to Private.
@@ -71,3 +75,5 @@ Step 9: Testing the API
 Test the Health Check route by visiting http://localhost:8080 in your browser or using curl:
 curl http://localhost:8080
 The server should respond with a JSON message containing the API's status, author, and version information.
+
+Mehak Dhull
